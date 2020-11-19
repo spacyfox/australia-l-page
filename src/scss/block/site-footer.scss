@@ -1,10 +1,29 @@
 $b: '.site-footer';
 
 #{$b} {
-  .site-footer__content {
+  &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
+    padding: 45px 0;
+  }
+
+  &__info {
+    .info__list {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+
+  &__social {
+    .social__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &_item {
+        margin: 0 12px;
+      }
+    }
   }
 }

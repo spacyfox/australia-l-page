@@ -6,16 +6,12 @@ $b: '.button';
   position: relative;
   display: inline-block;
   vertical-align: top;
-  height: 48px;
-  line-height: 48px;
+  height: 54px;
+  line-height: 54px;
   padding: 0 40px;
-  border-radius: 24px;
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: normal;
   text-align: center;
-  text-transform: uppercase;
-  color: $white-true;
-  background-color: $accent-base;
   outline: none;
   border: none;
   touch-action: manipulation;
@@ -23,8 +19,18 @@ $b: '.button';
   transition-duration: $g-transition-duration;
   transition-timing-function: $g-transition-easing;
 
+  &.button--yellow {
+    color: $black-true;
+    background-color: $yellow;
+  }
+
+  &.button--blue {
+    color: $white-true;
+    background-color: $dark-blue;
+  }
+
   &:hover {
-    background-color: lighten($accent-base, 13%);
+    //background-color: lighten($accent-base, 13%);
   }
 
   &:disabled,
