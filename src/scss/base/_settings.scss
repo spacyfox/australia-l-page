@@ -1,6 +1,6 @@
 // Size
-$outer-w: 1400px;
-$inner-pd: 120px;
+$outer-w: 1230px;
+$inner-pd: 30px;
 $inner-pd-ld: 40px;
 $inner-pd-tab: 25px;
 $inner-pd-mob: 15px;
@@ -8,6 +8,7 @@ $inner-pd-mob: 15px;
 // Colors
 $black-true: #000;
 $white-true: #fff;
+$yellow: #ffd228;
 
 // UI Colors
 $color-base: $white-true;
@@ -26,7 +27,7 @@ $bg-alt: #f0f0f0;
 $bg-footer: #ccc;
 
 // Fonts
-$font-base: 'Arial';
+$font-base: 'PT Sans';
 $font-alt: 'Meta';
 $font-size: 16px;
 $line-height: 1.33;

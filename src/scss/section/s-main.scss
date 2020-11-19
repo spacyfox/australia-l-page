@@ -1,0 +1,19 @@
+$b: '.s-main';
+
+#{$b} {
+  @include bg-cover();
+  display: flex;
+
+  &__title {
+    font-size: 50px;
+    color: $white-true;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+
+  &__tour, &__details {
+    font-size: 25px;
+    color: $white-true;
+    font-weight: normal;
+  }
+}
