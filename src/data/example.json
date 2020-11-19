@@ -1,0 +1,16 @@
+{
+  "exampleItems": [
+    {
+      "title": "<b>example title 1</b>",
+      "text": "example text 1"
+    },
+    {
+      "title": "<b>example title 2</b>",
+      "text": "example text 2"
+    },
+    {
+      "title": "<b>example title 3</b>",
+      "text": "example text 3"
+    }
+  ]
+}

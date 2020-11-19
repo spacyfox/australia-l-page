@@ -1,0 +1,14 @@
+ProjectTitle: Project
+ProjectColor: '#111111'
+
+PageList:
+- file: page.html
+  name: Page
+  ready: 5 # percentage of readiness
+
+- file: page-2.html
+  name: Page2
+  ready: 5 # percentage of readiness
+
+#- file: 404.html
+#  ready: 0

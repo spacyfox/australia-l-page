@@ -1,0 +1,28 @@
+.g-h1,
+.g-h2,
+.g-h3,
+.g-h4,
+.g-h5,
+.g-h6 {
+  font-weight: bold;
+}
+
+//.g-text-md {}
+//
+//.g-text-sm {}
+//
+//.g-text-xs {}
+
+.g-editable-content {
+  @include editable-text();
+
+  h3 {
+    font-size: em(22, 16);
+  }
+
+  p {
+    &:not(:last-child) {
+      margin-bottom: em(15, 16);
+    }
+  }
+}

@@ -1,0 +1,25 @@
+$b: '.l-header';
+
+#{$b} {
+  flex: 0 0 auto;
+
+  &__container {
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &.l-header__nav_item {
+      margin-left: 15px;
+    }
+  }
+}
