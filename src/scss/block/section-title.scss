@@ -1,0 +1,10 @@
+$b: '.section-title';
+
+#{$b} {
+  padding: 94px 0 50px 0;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: $font-base;
+  color: $title-base;
+  text-align: center;
+}

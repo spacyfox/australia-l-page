@@ -1,7 +1,7 @@
 // Size
 $outer-w: 1230px;
 $inner-pd: 30px;
-$inner-pd-ld: 40px;
+$inner-pd-ld: 30px;
 $inner-pd-tab: 25px;
 $inner-pd-mob: 15px;
 
@@ -16,6 +16,7 @@ $color-base: $white-true;
 $accent-base: #1a8cff;
 $action-base: #f42f3e;
 $text-base: #000000;
+$title-base: #040f19;
 $border-base: #e6ecf2;
 $link-base: #1964b1;
 $shadow-base: #004484;
@@ -25,7 +26,7 @@ $site-preloader-bg: $white-true;
 // Backgrounds
 $bg-main: $white-true;
 $bg-alt: #f0f0f0;
-$bg-footer: #ccc;
+$bg-footer: #f5f5f9;
 
 // Fonts
 $font-base: 'PT Sans';
@@ -43,7 +44,7 @@ $transition-easing-alt: cubic-bezier(0.77, 0, 0.19, 1);
 
 // Screen sizes
 $wide-desktop-width: 1600px;
-$desktop-width: 1340px;
+$desktop-width: 1366px;
 $low-desktop-width: 1024px;
 $tablet-width: 768px;
 

@@ -1,6 +1,7 @@
 $b: '.site-footer';
 
 #{$b} {
+  background-color: $bg-footer;
   &__content {
     display: flex;
     justify-content: space-between;

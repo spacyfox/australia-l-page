@@ -1,0 +1,39 @@
+$b: '.s-reasons';
+
+#{$b} {
+  &__slider {
+    margin: 0 - 15px;
+  }
+
+  &__slider_wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__slider_slide {
+    width: 33.3333%;
+  }
+
+  &__slider_item {
+    position: relative;
+    padding: 0 15px 53px 15px;
+  }
+
+  &__img {
+    background-size: contain;
+    width: 100%;
+    height: 253px;
+  }
+
+  &__title {
+    background-color: #002b58;
+    color: #fff;
+    text-align: center;
+    height: 48px;
+    line-height: 48px;
+    position: absolute;
+    bottom: 24px;
+    width: 300px;
+  }
+}
