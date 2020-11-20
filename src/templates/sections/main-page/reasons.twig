@@ -1,46 +1,19 @@
 <section class="s-reasons section">
     <div class="s-reasons__container l-outer-width l-inner-padding">
         <div class="s-reasons__container-inner">
-            <div class="section-title">6 причин посетить Австралию</div>
+            <div class="section-title">
+                <div class="section-title_main">6 причин посетить Австралию</div>
+            </div>
             <div class="s-reasons__slider swiper-container">
                 <div class="s-reasons__slider-wrapper swiper-wrapper">
-                    <!-- @todo вынести в json -->
-                    <div class="s-reasons__slider-slide swiper-slide">
-                        <div class="s-reasons__slider_item">
-                            <div class="s-reasons__img" style="background-image: url('../../../img/main-page/reasons/1.jpg')"></div>
-                            <div class="s-reasons__title">Культура аборигенов</div>
+                    {% for slide in reasons.slider %}
+                        <div class="s-reasons__slider-slide swiper-slide">
+                            <div class="s-reasons__slider-item image-block">
+                                <div class="s-reasons__img image-block__img" style="background-image: url('{{ slide.bg }}')"></div>
+                                <div class="s-reasons__title image-block__title">{{ slide.title }}</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="s-reasons__slider-slide swiper-slide">
-                        <div class="s-reasons__slider_item">
-                            <div class="s-reasons__img" style="background-image: url('../../../img/main-page/reasons/2.jpg')"></div>
-                            <div class="s-reasons__title">Национальные парки</div>
-                        </div>
-                    </div>
-                    <div class="s-reasons__slider-slide swiper-slide">
-                        <div class="s-reasons__slider_item">
-                            <div class="s-reasons__img" style="background-image: url('../../../img/main-page/reasons/3.jpg')"></div>
-                            <div class="s-reasons__title">Города австралии</div>
-                        </div>
-                    </div>
-                    <div class="s-reasons__slider-slide swiper-slide">
-                        <div class="s-reasons__slider_item">
-                            <div class="s-reasons__img" style="background-image: url('../../../img/main-page/reasons/4.jpg')"></div>
-                            <div class="s-reasons__title">Пляжи и дайвинг</div>
-                        </div>
-                    </div>
-                    <div class="s-reasons__slider-slide swiper-slide">
-                        <div class="s-reasons__slider_item">
-                            <div class="s-reasons__img" style="background-image: url('../../../img/main-page/reasons/5.jpg')"></div>
-                            <div class="s-reasons__title">Эндемичная фауна</div>
-                        </div>
-                    </div>
-                    <div class="s-reasons__slider-slide swiper-slide">
-                        <div class="s-reasons__slider_item">
-                            <div class="s-reasons__img" style="background-image: url('../../../img/main-page/reasons/6.jpg')"></div>
-                            <div class="s-reasons__title">Вино и кулинария</div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

@@ -4,13 +4,15 @@ $b: '.s-gallery';
   padding: 0 0 100px 0;
   &__slider {
     &-gallery-top {
-      background-size: cover;
       height: 556px;
       margin-bottom: 29px;
     }
     &-gallery-thumbs {
-      background-size: cover;
       height: 139px;
+    }
+
+    &-item {
+      background-size: contain;
     }
   }
 }

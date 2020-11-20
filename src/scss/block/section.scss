@@ -2,4 +2,8 @@ $b: '.section';
 
 #{$b} {
   position: relative;
+
+  &.bg-grey {
+    background-color: $bg-alt;
+  }
 }
