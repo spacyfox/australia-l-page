@@ -13,13 +13,14 @@ $b: '.s-main';
   &__title {
     font-size: 50px;
     color: $white-true;
-
     font-weight: bold;
     margin-bottom: 22px;
-  } // @todo отступы соблюдай, пусттые строки тоже не нужны
+  }
+
   &__title, &__tour {
     text-transform: uppercase;
   }
+
   &__tour, &__details {
     font-size: 25px;
     color: $white-true;

@@ -2,17 +2,17 @@ $b: '.s-reasons';
 
 #{$b} {
   &__slider {
-    margin: 0 - 15px; // @todo посмотри результирующие стили
-  }
+    margin: 0 -15px;
 
-  &__slider_wrapper { // @todo подчеркивание нижнее - это модификатор, а у тебя тут блок, т.е. класс должен быть .s-reasons__slider-wrapper
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+    &-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
 
-  &__slider_slide { // @todo конкатенацию через & можно делать сколько угодно раз
-    width: 33.3333%;
+    &-slide {
+      width: 33.3333%;
+    }
   }
 
   &__slider_item {
