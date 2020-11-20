@@ -3,15 +3,26 @@ $b: '.s-reasons';
 #{$b} {
   &__slider {
     margin: 0 -15px;
+    &.swiper-container {
+      overflow: visible;
+    }
 
     &-wrapper {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+
+      @include mobile {
+        flex-wrap: nowrap;
+      }
     }
 
     &-slide {
       width: 33.3333%;
+
+      @include mobile {
+        width: 50%!important;
+      }
     }
   }
 
@@ -33,7 +44,7 @@ $b: '.s-reasons';
     height: 48px;
     line-height: 48px;
     position: absolute;
-    bottom: 24px;
+    bottom: 32px;
     width: 300px;
   }
 }

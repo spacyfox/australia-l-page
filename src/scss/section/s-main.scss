@@ -10,6 +10,10 @@ $b: '.s-main';
     width: 100%;
   }
 
+  &__content {
+    padding-top: 60px;
+  }
+
   &__title {
     font-size: 50px;
     color: $white-true;
