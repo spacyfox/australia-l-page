@@ -71,6 +71,7 @@
     "require-dir": "^1.2.0",
     "require-yaml": "^0.0.1",
     "sass-lint": "^1.13.1",
+    "swiper": "^6.3.5",
     "vue-loader": "^15.9.3",
     "vue-template-compiler": "^2.6.12",
     "webpack": "^4.44.1",

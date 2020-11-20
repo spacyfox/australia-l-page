@@ -8,12 +8,22 @@ $b: '.site-footer';
     align-items: center;
     text-align: center;
     padding: 45px 0;
+
+    @include mobile {
+      flex-direction: column;
+      padding: 35px 0;
+    }
   }
 
   &__info {
     .info__list {
       width: 80%;
       margin: 0 auto;
+
+      @include mobile {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
     }
   }
 
