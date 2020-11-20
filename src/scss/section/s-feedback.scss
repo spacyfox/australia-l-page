@@ -1,0 +1,30 @@
+$b: '.s-feedback';
+
+#{$b} {
+  background-color: $yellow;
+  min-height: 737px;
+  padding: 64px 0;
+
+  &__form {
+    width: 57%;
+    background-color: $white-true;
+    padding: 66px 70px 80px 70px;
+
+    @include mobile {
+      width: 100%;
+      padding: 66px 35px 80px 35px;
+    }
+  }
+
+  &__bg {
+    img {
+      position: absolute;
+      bottom: 0;
+      transform: translateX(25%);
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+}

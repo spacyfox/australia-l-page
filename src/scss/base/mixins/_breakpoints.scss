@@ -51,3 +51,9 @@
     @content;
   }
 }
+
+@mixin mobile-xs {
+  @media screen and (max-width: #{$mobile-width - 1}) {
+    @content;
+  }
+}

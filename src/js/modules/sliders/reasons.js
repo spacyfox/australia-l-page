@@ -1,32 +1,28 @@
 import swiper from 'swiper/bundle';
 
-function initReasonsSlider() {
-  const reasonsSlider = document.querySelectorAll('.s-reasons__slider');
+export default {
+  init() {
+    const reasonsSlider = document.querySelectorAll('.s-reasons__slider');
 
-  function init(el) {
-    return new swiper('.s-reasons__slider');
-  }
-
-  Array.prototype.forEach.call(reasonsSlider, (el, i)=> {
-    let sliderInstance = null;
-    const mql = window.matchMedia('(max-width: 767px)');
-
-    if (mql.matches) {
-      sliderInstance = init(el);
+    function init(el) {
+      return new swiper('.s-reasons__slider');
     }
 
-    mql.addEventListener('change', (e) => {
-      if (e.matches) {
+    Array.prototype.forEach.call(reasonsSlider, (el, i)=> {
+      let sliderInstance = null;
+      const mql = window.matchMedia('(max-width: 767px)');
+
+      if (mql.matches) {
         sliderInstance = init(el);
-      } else if (sliderInstance) {
-        sliderInstance.destroy();
       }
+
+      mql.addEventListener('change', (e) => {
+        if (e.matches) {
+          sliderInstance = init(el);
+        } else if (sliderInstance) {
+          sliderInstance.destroy();
+        }
+      });
     });
-  });
-}
-
-function init() {
-  initReasonsSlider();
-}
-
-document.addEventListener('DOMContentLoaded', init);
+  },
+};
