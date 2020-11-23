@@ -1,4 +1,4 @@
-<div class="s-unique section bg-grey">
+<section class="s-unique section bg-grey">
     <div class="s-unique__container l-outer-width l-inner-padding">
         <div class="section-title">
             <div class="section-title_main">Мы уникальны</div>
@@ -9,12 +9,15 @@
                 {% for slide in unique.slider %}
                     <div class="s-unique__slider-slide swiper-slide">
                         <div class="s-unique__slider-item image-block">
-                            <div class="s-unique__img image-block__img" style="background-image: url('{{ slide.img }}')"></div>
-                            <div class="s-unique__title image-block__title">{{ slide.title }}</div>
+                            <div class="s-unique__top">
+                                <div class="s-unique__img image-block__img" style="background-image: url('{{ slide.img }}')"></div>
+                                <div class="s-unique__title image-block__title">{{ slide.title }}</div>
+                            </div>
+                            <div class="s-unique__text">{{ slide.text }}</div>
                         </div>
                     </div>
                 {% endfor %}
             </div>
         </div>
     </div>
-</div>
+</section>

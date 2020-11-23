@@ -1,0 +1,29 @@
+<section class="s-details section">
+    <div class="s-details__container l-outer-width l-inner-padding">
+        <div class="section-title">
+            <div class="section-title_main">Детали</div>
+        </div>
+        <div class="s-details__content">
+            <div class="s-details__block">
+                <div class="s-details__block-inner price-include">
+                    <div class="s-details__block-title">Включено в стоимость</div>
+                    <ul class="s-details__list">
+                        {% for include in details.included %}
+                        <li class="s-details__list-item">{{ include.text }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="s-details__block">
+                <div class="s-details__block-inner">
+                    <div class="s-details__block-title">Не включено в стоимость</div>
+                    <ul class="s-details__list">
+                        {% for notInclude in details.notIncluded %}
+                        <li class="s-details__list-item">{{ notInclude.text }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

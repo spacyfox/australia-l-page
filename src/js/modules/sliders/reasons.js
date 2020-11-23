@@ -1,24 +1,22 @@
-import swiper from 'swiper/bundle';
+import Swiper from 'swiper/bundle';
 
 export default {
   init() {
-    const reasonsSlider = document.querySelectorAll('.s-reasons__slider');
-
-    function init(el) {
-      return new swiper('.s-reasons__slider');
-    }
-
-    Array.prototype.forEach.call(reasonsSlider, (el, i)=> {
+    const mql = window.matchMedia('(max-width: 767px)');
+    $('.s-reasons__slider').each((index, element) => {
       let sliderInstance = null;
-      const mql = window.matchMedia('(max-width: 767px)');
 
+      function init(element) {
+        // eslint-disable-next-line no-new
+        new Swiper(element);
+      }
       if (mql.matches) {
-        sliderInstance = init(el);
+        sliderInstance = init(element);
       }
 
       mql.addEventListener('change', (e) => {
         if (e.matches) {
-          sliderInstance = init(el);
+          sliderInstance = init(element);
         } else if (sliderInstance) {
           sliderInstance.destroy();
         }

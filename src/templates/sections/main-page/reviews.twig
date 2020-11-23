@@ -1,0 +1,25 @@
+<section class="s-reviews section">
+    <div class="s-reviews__container l-outer-width l-inner-padding">
+        <div class="section-title">
+            <div class="section-title_main">Отчеты о предыдущих путешествиях</div>
+            <div class="section-title_subtitle">Просмотрите лучшие моменты со всех наших путешествий</div>
+        </div>
+        <div class="s-reviews__slider swiper-container">
+            <div class="s-reviews__slider-wrapper swiper-wrapper">
+                {% for slide in reviews.slider %}
+                    <div class="s-reviews__slider_slide swiper-slide">
+                        <div class="s-reviews__slider-item">
+                            <div class="s-reviews__video-container" style="background-image: url('{{ slide.img }}');"></div>
+                            <div class="s-reviews__info">
+                                <div class="s-reviews__info-name">{{ slide.author }}</div>
+                                <div class="s-reviews__info-about">{{ slide.about }}</div>
+                                <div class="s-reviews__info-text">{{ slide.text }}</div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="pagination swiper-pagination"></div>
+        </div>
+    </div>
+</section>
