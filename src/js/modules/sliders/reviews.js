@@ -11,6 +11,7 @@ export default {
         centeredSlides: true,
         slidesPerView: 'auto',
         initialSlide: 2,
+        speed: 500,
         coverflowEffect: {
           rotate: 0,
           stretch: 0,

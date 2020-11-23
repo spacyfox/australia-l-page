@@ -10,6 +10,12 @@
   }
 }
 
+@mixin medium-desktop {
+  @media screen and (max-width: #{$medium-desktop-width - 1px}) {
+    @content;
+  }
+}
+
 @mixin low-desktop {
   @media screen and (max-width: #{$desktop-width - 1px}) {
     @content;

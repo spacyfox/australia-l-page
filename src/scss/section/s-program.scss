@@ -1,0 +1,43 @@
+$b: '.s-program';
+
+#{$b} {
+  padding: 31px 0 100px 0;
+
+  &__tabs {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__tabs-nav {
+    width: 26%;
+  }
+
+  &__tabs-list_item {
+    border-bottom: 2px solid $bg-alt;
+    padding: 15px 25px 9px 25px;
+    background-color: #e0e0e4;
+
+    &.active {
+      background-color: $white-true;
+    }
+  }
+
+  &__tabs-list_subtitle {
+    font-size: 14px;
+    color: $tabs-grey;
+  }
+
+  &__tabs-content {
+    background-color: $white-true;
+    width: 74%;
+    padding: 38px 34px;
+
+    p {
+      margin-bottom: 20px;
+
+      &.blue {
+        color: $dark-blue;
+      }
+    }
+  }
+}

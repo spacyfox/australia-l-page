@@ -1,10 +1,14 @@
 $b: '.s-reviews';
 
 #{$b} {
-  padding-bottom: 92px;
+  padding: 26px 0 92px 0;
 
   &__slider_slide {
     width: 66%;
+
+    &:not(.swiper-slide-active) {
+      top: -37px;
+    }
 
     &.swiper-slide-active {
       .s-reviews__info {
@@ -25,7 +29,8 @@ $b: '.s-reviews';
   }
 
   &__video-container {
-    background-size: contain;
+    @include aspect-ratio(16, 9);
+    background-size: cover;
     height: 289px;
   }
 

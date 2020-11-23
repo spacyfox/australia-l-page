@@ -3,7 +3,7 @@ import Swiper from 'swiper/bundle';
 export default {
   init() {
     const galleryThumbs = new Swiper('.s-gallery__slider-gallery-thumbs', {
-      spaceBetween: 10,
+      spaceBetween: 30,
       slidesPerView: 4,
       freeMode: true,
       watchSlidesVisibility: true,
