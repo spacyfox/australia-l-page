@@ -22,11 +22,21 @@ $b: '.button';
   &.button--yellow {
     color: $black-true;
     background-color: $yellow;
+
+    &:hover {
+      color: $white-true;
+      background-color: $dark-blue;
+    }
   }
 
   &.button--blue {
     color: $white-true;
     background-color: $dark-blue;
+
+    &:hover {
+      color: $black-true;
+      background-color: $yellow;
+    }
   }
 
   &:hover {

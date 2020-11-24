@@ -9,7 +9,9 @@
                 {% for slide in reviews.slider %}
                     <div class="s-reviews__slider_slide swiper-slide">
                         <div class="s-reviews__slider-item">
-                            <div class="s-reviews__video-container" style="background-image: url('{{ slide.img }}');"></div>
+                            <div class="s-reviews__video-container" style="background-image: url('{{ slide.img }}');">
+                                <a href="#" class="s-reviews__video-play"></a>
+                            </div>
                             <div class="s-reviews__info">
                                 <div class="s-reviews__info-name">{{ slide.author }}</div>
                                 <div class="s-reviews__info-about">{{ slide.about }}</div>

@@ -22,13 +22,12 @@ body {
 }
 
 .g-tab {
-  &._active {
-    cursor: default;
-  }
+  cursor: pointer;
 }
 
-.g-tab-content {
+.s-program__tabs-content_item {
   &:not(._active) {
-    display: none;
+    opacity: 0;
+    height: 0;
   }
 }

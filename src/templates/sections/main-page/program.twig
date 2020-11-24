@@ -5,39 +5,18 @@
         </div>
         <div class="s-program__tabs">
             <div class="s-program__tabs-nav">
+                {% set arr = [1,2,3,4,5,6] %}
                 <ul class="s-program__tabs-list">
-                    <li class="s-program__tabs-list_item active">
-                        <div class="s-program__tabs-list_title">День 1</div>
+                    {% for items in arr | slice(6) %}
+                    <li class="s-program__tabs-list_item g-tab" data-tab-name="{{ loop.index }}">
+                        <div class="s-program__tabs-list_title">День {{ loop.index }}</div>
                         <div class="s-program__tabs-list_subtitle">Сидней – долина Хантер, 247 км</div>
                     </li>
-                    <li class="s-program__tabs-list_item">
-                        <div class="s-program__tabs-list_title">День 1</div>
-                        <div class="s-program__tabs-list_subtitle">Сидней – долина Хантер, 247 км</div>
-                    </li>
-                    <li class="s-program__tabs-list_item">
-                        <div class="s-program__tabs-list_title">День 1</div>
-                        <div class="s-program__tabs-list_subtitle">Сидней – долина Хантер, 247 км</div>
-                    </li>
-                    <li class="s-program__tabs-list_item">
-                        <div class="s-program__tabs-list_title">День 1</div>
-                        <div class="s-program__tabs-list_subtitle">Сидней – долина Хантер, 247 км</div>
-                    </li>
-                    <li class="s-program__tabs-list_item">
-                        <div class="s-program__tabs-list_title">День 1</div>
-                        <div class="s-program__tabs-list_subtitle">Сидней – долина Хантер, 247 км</div>
-                    </li>
-                    <li class="s-program__tabs-list_item">
-                        <div class="s-program__tabs-list_title">День 1</div>
-                        <div class="s-program__tabs-list_subtitle">Сидней – долина Хантер, 247 км</div>
-                    </li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="s-program__tabs-content">
-                <p><b>14:30</b> — Получаем автомобиль и отправляемся из Сиднея на север через мост Harbour Bridge и по шоссе Pacific Highway через города Госфорд (Gosford) и Ньюкасл (Newcastle).</p>
-                <p><b>Ньюкасл – это шестой по величине город Австралии.</b></p>
-                <p><b>19:00</b> — Покидаем Ньюкасл и продолжаем путь через городок Мейтленд (Maitland) до виноградной долины Хантер (Hunter Valley), где представится прекрасная возможность продегустировать и приобрести одни из лучших вин в Австралии, а также познакомиться с творениями искусства и кулинарии.</p>
-                <p><b>22:00</b> — Размещение в отеле Leisure Inn Pokolbin (номер категории Studio; без завтрака).</p>
-                <p class="blue"><b>Аренда автомобиля действует до следующего дня. Вам необходимо будет оставить его городском офисе или аэропорту вылета в то же самое время, в которое вы забирали его в первый день (чтобы избежать дополнительных выплат).</b></p>
+                {% include 'modules/tabs.twig' %}
             </div>
         </div>
     </div>

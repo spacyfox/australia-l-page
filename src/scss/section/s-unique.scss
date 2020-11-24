@@ -27,6 +27,14 @@ $b: '.s-unique';
     @include medium-desktop {
       width: 50%;
     }
+
+    @include mobile {
+      width: 70%!important;
+    }
+
+    @include mobile-xs {
+      width: 100%!important;
+    }
   }
 
   &__slider-item {
@@ -36,6 +44,10 @@ $b: '.s-unique';
     flex-direction: column;
     height: 100%;
     box-shadow: 9px 5px 19.11px 1.89px rgba(0, 0, 0, 0.06);
+
+    @include mobile-xs {
+      margin: 0 15px;
+    }
   }
 
   &__img {

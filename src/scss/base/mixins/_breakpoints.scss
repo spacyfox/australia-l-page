@@ -34,6 +34,12 @@
   }
 }
 
+@mixin wide-tablet {
+  @media screen and (max-width: #{$wide-tablet-width - 1px}) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media screen and (max-width: #{$low-desktop-width - 1px}) {
     @content;

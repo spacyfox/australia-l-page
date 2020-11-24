@@ -3,6 +3,10 @@ $b: '.s-details';
 #{$b} {
   padding-bottom: 170px;
 
+  .section-title {
+    padding: 51px 0 44px 0;
+  }
+
   &__content {
     margin: 0 -15px;
     display: flex;

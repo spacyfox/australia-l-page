@@ -14,6 +14,10 @@ $b: '.s-feedback';
       width: 100%;
       padding: 66px 35px 80px 35px;
     }
+
+    @include tablet-only {
+      width: 70%;
+    }
   }
 
   &__bg {
