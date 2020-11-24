@@ -16,9 +16,9 @@ $b: '.s-reviews';
 
     &.swiper-slide-active {
       .s-reviews__info {
+        background-color: $bg-alt;
         padding: 32px 70px 40px 70px;
-        visibility: visible;
-        height: 100%;
+        opacity: 1;
 
         @include mobile {
           padding: 32px 35px 40px 35px;
@@ -32,12 +32,11 @@ $b: '.s-reviews';
   }
 
   &__slider-item {
-    background-color: $bg-alt;
     margin: 0 auto;
   }
 
   &__video-container {
-    @include aspect-ratio(16, 9);
+    @include aspect-ratio();
     background-size: cover;
     height: 279px;
     display: flex;
@@ -59,8 +58,7 @@ $b: '.s-reviews';
   }
 
   &__info {
-    visibility: hidden; // @todo может просто только opacity менять, чтобы красивее было
-    height: 0;
+    opacity: 0;
   }
 
   &__info-name {

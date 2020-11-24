@@ -4,7 +4,7 @@ $b: '.s-about';
   padding: 20px 0 80px 0;
 
   .section-title {
-    padding: 0px 0 33px 0; // @todo шторм же подчеркивает, что px можно не писать при нуле?
+    padding: 0 0 33px 0;
   }
 
   &__content {
@@ -40,10 +40,9 @@ $b: '.s-about';
     background: url("../../img/main-page/about/sydney.jpg") center center no-repeat;
     background-size: cover;
     width: 50%;
-    height: 560px; // @todo если используешь aspect-ratio, то высота при этом лишняя скорее всего, проверь везде
     position: relative;
     margin-left: 30px;
-    @include aspect-ratio(1, 1); // @todo миксин этот работает так же, если параметры не указывать: aspect-ratio();
+    @include aspect-ratio();
 
     @include mobile {
       width: 80%;

@@ -1,0 +1,124 @@
+$b: '.popup';
+
+#{$b} {
+  position: relative;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 50px 0 100px;
+  color: $black-true;
+  background-color: $white-true;
+  overflow: hidden;
+
+  &-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1043;
+    outline: 0!important;
+    -webkit-backface-visibility: hidden; // fixes webkit bug that can cause "false" scrollbar
+    overflow: hidden auto;
+
+    background-color: rgba($white-true, 0.7);
+    backdrop-filter: blur(2px);
+    visibility: hidden;
+    opacity: 0;
+    transition: $g-transition;
+    pointer-events: none;
+
+    &._active {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  &-container {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    white-space: nowrap;
+
+    //letter-spacing: -0.25em;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      width: 0px;
+      vertical-align: middle;
+      margin-right: -0.25em; /* Adjusts for spacing */
+    }
+  }
+
+  &-content {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 auto;
+    text-align: left;
+    z-index: 1045;
+    width: 100%;
+    cursor: auto;
+    white-space: normal;
+    padding: 15px 15px;
+
+    //letter-spacing: normal;
+  }
+
+  &--lk {
+    max-width: 500px;
+  }
+}
+
+.custom-mfp-zoom {
+  $transition-duration: .4s;
+  $transition-easing: ease-in-out;
+
+  #{$b} {
+    transition: transform $transition-duration $transition-easing, opacity $transition-duration $transition-easing;
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  &.mfp-ready #{$b} {
+    opacity: 1;
+    transform: scale(1);
+  }
+  &.mfp-removing #{$b} {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  &.mfp-bg {
+    opacity: 0;
+    transition: opacity $transition-duration $transition-easing;
+  }
+  &.mfp-ready.mfp-bg {
+    opacity: 0.35;
+  }
+  &.mfp-removing.mfp-bg {
+    opacity: 0;
+  }
+  .mfp-container {
+    padding: 0 0;
+    overflow-y: auto;
+  }
+  .mfp-content {
+    //vertical-align: top !important; // для удобной верстки
+  }
+  .mfp-close {
+    //position: absolute;
+    //top: 22px;
+    //right: 22px;
+    //width: 30px;
+    //height: 30px;
+    //color: transparent;
+    //background-image: url(../img/icons/close.svg);
+    //background-size: 100% 100%;
+    //opacity: 1;
+  }
+}

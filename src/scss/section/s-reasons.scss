@@ -20,14 +20,22 @@ $b: '.s-reasons';
     &-slide {
       width: 33.3333%;
 
-      @include mobile {
+      @include wide-tablet {
         width: 50%!important;
+      }
+
+      @include mobile {
+        width: 80%!important;
       }
     }
   }
 
   &__slider-item {
     padding: 0 15px 53px 15px;
+
+    @include mobile-xs {
+      padding: 0 15px;
+    }
   }
 
   &__img {
@@ -39,5 +47,10 @@ $b: '.s-reasons';
     line-height: 48px;
     bottom: 32px;
     width: 300px;
+
+    @include mobile-xs {
+      width: 100%;
+      position: relative;
+    }
   }
 }

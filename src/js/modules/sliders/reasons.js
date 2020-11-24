@@ -1,4 +1,4 @@
-import Swiper from 'swiper/bundle';
+import Swiper from 'swiper/swiper-bundle.min';
 
 export default {
   init() {
@@ -18,7 +18,7 @@ export default {
         // @todo но функция ничего не возвращает, поэтому на строке 12 добавил return
       }
 
-      mql.addEventListener('change', (e) => {
+      mql.addListener((e) => {
         if (e.matches) {
           sliderInstance = init(element);
         } else if (sliderInstance) {

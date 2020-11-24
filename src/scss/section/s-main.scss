@@ -3,10 +3,15 @@ $b: '.s-main';
 #{$b} {
   @include bg-cover();
   display: flex;
-  min-height: 700px; // @todo проверить в IE
-  align-items: center;
 
   &__container {
+    width: 100%;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__inner {
     width: 100%;
   }
 
