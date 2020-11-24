@@ -8,6 +8,7 @@ import sliders from './modules/sliders';
 import tabs from './modules/tabs';
 import scrollTo from './modules/scrollTo';
 import popup from './modules/popup';
+import form from './modules/form';
 
 documentReady(() => {
   sitePreloader.init();
@@ -18,6 +19,7 @@ documentReady(() => {
   tabs.init();
   scrollTo.init();
   popup.init();
+  form.init();
 });
 
 documentLoaded(() => {

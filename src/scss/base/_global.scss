@@ -29,7 +29,7 @@ body {
   cursor: pointer;
 }
 
-.s-program__tabs-content_item {
+.g-tab-content{
   &:not(._active) {
     opacity: 0;
     height: 0;

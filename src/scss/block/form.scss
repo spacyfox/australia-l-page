@@ -20,6 +20,14 @@ $b: '.form';
     line-height: 43px;
     padding: 0 5px;
     margin-bottom: 33px;
+
+    &.valid {
+      border-color: green;
+    }
+
+    &.error {
+      border-color: red;
+    }
   }
 
   &__button {
