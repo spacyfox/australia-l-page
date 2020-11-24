@@ -59,7 +59,7 @@ $b: '.s-reviews';
   }
 
   &__info {
-    visibility: hidden;
+    visibility: hidden; // @todo может просто только opacity менять, чтобы красивее было
     height: 0;
   }
 

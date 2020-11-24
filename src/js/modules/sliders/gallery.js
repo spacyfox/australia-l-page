@@ -2,6 +2,7 @@ import Swiper from 'swiper/bundle';
 
 export default {
   init() {
+    // @todo сделай через цикл по блокам .s-gallery__slider
     const galleryThumbs = new Swiper('.s-gallery__slider-gallery-thumbs', {
       spaceBetween: 30,
       slidesPerView: 4,

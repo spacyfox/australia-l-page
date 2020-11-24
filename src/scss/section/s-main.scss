@@ -3,7 +3,7 @@ $b: '.s-main';
 #{$b} {
   @include bg-cover();
   display: flex;
-  min-height: 700px;
+  min-height: 700px; // @todo проверить в IE
   align-items: center;
 
   &__container {

@@ -3,7 +3,7 @@ $b: '.image-block';
 #{$b} {
   position: relative;
   &__img {
-    background-size: contain;
+    background-size: contain; // @todo скорее всего тут нужен cover
     width: 100%;
   }
 

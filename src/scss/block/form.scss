@@ -35,7 +35,7 @@ $b: '.form';
       margin: 0 auto;
     }
 
-    &include mobile-xs {
+    @include mobile-xs {
       padding: 0 10px;
     }
   }

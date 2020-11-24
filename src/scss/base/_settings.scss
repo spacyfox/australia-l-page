@@ -34,7 +34,7 @@ $bg-alt: #f5f5f9;
 $font-base: 'PT Sans';
 $font-alt: 'Meta';
 $font-size: 20px;
-$line-height: 27px;
+$line-height: 27px; // @todo относительной величиной, можешь записать (27 / 20)
 $font-family-base: $font-base, Arial, Helvetica, sans-serif;
 $font-family-alt: $font-alt, Arial, Helvetica, sans-serif;
 
