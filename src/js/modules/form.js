@@ -3,7 +3,6 @@ import 'jquery-validation';
 export default {
   init() {
     const self = this;
-
     $('.s-feedback__form').each(function () {
       self.initForm(this);
     });
@@ -11,33 +10,41 @@ export default {
 
   initForm(form) {
     const $form = $(form);
-    if (!$form.length) return;
+    const $successMsg = $('.form-alert');
+    $.validator.addMethod('email_or_mobile', function (value, element) {
+      return this.optional(element)
+        && (
+          /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/.test(value)
+          || /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/i.test(value)
+        );
+    }, 'Введите корректный телефон или email');
+
     $form.validate({
       rules: {
         name: {
           required: true,
-          name: true,
-          regex: /^[^\s\t]/,
-          minLength: 2,
+          minlength: 2,
         },
         email: {
+          email_or_mobile: true,
           required: true,
-          email: true,
         },
       },
-
       messages: {
         name: {
-          regex: 'Введите корректное имя',
-          minLength: 'Введите корректное имя',
+          required: 'Введите свое имя',
+          minlength: 'Введите корректное имя',
         },
         email: {
-          email: 'Введите корректный e-mail',
+          required: 'Введите свой телефон или email',
+        },
+        phone: {
+          required: 'Введите свой телефон или email',
         },
       },
-
-      errorPlacement() {
-        return true;
+      submitHandler(form, e) {
+        e.preventDefault();
+        $successMsg.show();
       },
     });
   },
