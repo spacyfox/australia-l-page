@@ -14,8 +14,6 @@ export default {
 
       if (mql.matches) {
         sliderInstance = init(element);
-        // @todo тут присваиваешь переменной значение, возвращаемое функцией,
-        // @todo но функция ничего не возвращает, поэтому на строке 12 добавил return
       }
 
       mql.addListener((e) => {

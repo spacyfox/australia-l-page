@@ -8,7 +8,7 @@ export default {
     });
   },
 
-  initForm: function (form) {
+  initForm(form) {
     const $form = $(form);
     const $successMsg = $('.form-alert');
     const $successMsgClose = $('.form-alert__close');

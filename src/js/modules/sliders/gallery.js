@@ -10,6 +10,8 @@ export default {
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
       });
+
+      // eslint-disable-next-line no-unused-vars
       const galleryTop = new Swiper('.s-gallery__slider-gallery-top', {
         spaceBetween: 10,
         effect: 'fade',
