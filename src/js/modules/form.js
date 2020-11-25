@@ -8,14 +8,15 @@ export default {
     });
   },
 
-  initForm(form) {
+  initForm: function (form) {
     const $form = $(form);
     const $successMsg = $('.form-alert');
+    const $successMsgClose = $('.form-alert__close');
     $.validator.addMethod('email_or_mobile', function (value, element) {
       return this.optional(element)
-        && (
+        || (
           /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/.test(value)
-          || /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/i.test(value)
+          || /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([А-Яа-яЁёa-zA-Z\-0-9]+\.)+[А-Яа-яЁёa-zA-Z]{2,}))$/.test(value)
         );
     }, 'Введите корректный телефон или email');
 
@@ -26,6 +27,7 @@ export default {
           minlength: 2,
         },
         email: {
+          email: false,
           email_or_mobile: true,
           required: true,
         },
@@ -38,13 +40,14 @@ export default {
         email: {
           required: 'Введите свой телефон или email',
         },
-        phone: {
-          required: 'Введите свой телефон или email',
-        },
       },
       submitHandler(form, e) {
         e.preventDefault();
         $successMsg.show();
+        $form[0].reset();
+        $successMsgClose.click(() => {
+          $successMsg.hide();
+        });
       },
     });
   },
