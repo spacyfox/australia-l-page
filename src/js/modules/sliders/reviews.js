@@ -20,7 +20,7 @@ export default {
           slideShadows: false,
         },
         pagination: {
-          el: '.swiper-pagination',
+          el: el.find('.swiper-pagination')[0],
           // @todo пагинация именно внутри текущего контейнера, т.е. должно быть: el: el.find('.swiper-pagination')[0],
           // так же сделать в gallery.js для строк 6, 15, 19, 20
           clickable: true,

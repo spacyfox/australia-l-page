@@ -44,10 +44,10 @@ export default {
       submitHandler(form, e) {
         e.preventDefault();
         $successMsg.show();
-        $form[0].reset();
         $successMsgClose.click(() => {
           $successMsg.hide();
         });
+        $form[0].reset();
       },
     });
   },
