@@ -1,4 +1,4 @@
-import Swiper from 'Swiper';
+import Swiper from 'swiper/swiper-bundle.min';
 
 export default function swiperToggle(initialized, element, options) {
   if (initialized) {
