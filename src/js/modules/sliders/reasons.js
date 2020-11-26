@@ -1,26 +1,19 @@
-import Swiper from 'swiper/swiper-bundle.min';
+import { mobile } from '../media';
+import dispatcher from '../dispatcher';
+import swiperToggle from '../../utils/swiperToggle';
 
 export default {
   init() {
-    const mql = window.matchMedia('(max-width: 767px)');
+    function create(element) {
+      swiperToggle(mobile(), element, {});
+    }
 
     $('.s-reasons__slider').each((index, element) => {
-      let sliderInstance = null;
+      create(element);
 
-      function init(element) {
-        // eslint-disable-next-line no-new
-        return new Swiper(element);
-      }
-
-      if (mql.matches) {
-        sliderInstance = init(element);
-      }
-
-      mql.addListener((e) => {
-        if (e.matches) {
-          sliderInstance = init(element);
-        } else if (sliderInstance) {
-          sliderInstance.destroy();
+      dispatcher.subscribe(({ type, content, contentSelector }) => {
+        if (type === 'resize:width') {
+          create(element);
         }
       });
     });

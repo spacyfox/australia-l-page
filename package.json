@@ -86,6 +86,6 @@
     "lozad": "^1.15.0",
     "magnific-popup": "^1.1.0",
     "swiper": "^6.3.5",
-    "throttle": "^1.0.3"
+    "yarn": "^1.22.10"
   }
 }
